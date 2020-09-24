@@ -1,0 +1,29 @@
+﻿# AT Modem Commands:
+
+# Select phonebook device-ionternal
+AT+CPBS="ME"
+
+# Select phonebook emergency-numbers
+AT+CPBS="EN"
+
+# Get all supported write modes:
+AT+CPBW=?
+
+#Write Phonebook entry to the next available location
+AT+CPBW=,”6187759088",129,”Adam”
+
+# Read all phonebook-entries but only the ones set are returned
+AT+CPBR=1,99
+
+# Read the phone book entry 1
+AT+CPBR=1
+
+#Delete phonebookentry at 2
+AT+CPBW=2
+
+
+# Phonenumber-Types:
+129 – National number type
+161 – National number type
+145 – INternational number type
+177 – Network specific number
